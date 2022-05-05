@@ -1,0 +1,61 @@
+site_name: lejbronika
+site_url: https://example.com/
+remote_branch: main
+theme:
+  name: material
+  logo: media/endless-logo.png
+  favicon: media/endless-favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - header.autohide
+plugins:
+  - tags:
+      tags_file: tags.md
+  - search:
+      lang: 
+        - en
+        - ru
+nav:
+    - Home: 
+      - index.md
+      - tags.md
+    - Docs-as-live: 
+      - docdocs/index.md
+    - Melty Minds: 
+      - meltyminds/index.md
+      - 'Marlin Configuration Notes': meltyminds/configure_marlin.md
+    - Notes: 
+      - notes/index.md
+      - Windows: notes/win_notes.md
+      - Linux: notes/linux_notes.md
+      - GIT: notes/git_notes.md
+    - How To:
+      - howto/index.md
+      - 'Publish sphinx-generated docs on gh-pages': 'howto/sphinx_to_github_pages_eng.md'
+      - 'Опубликовать sphinx-документацию на gh-pages': 'howto/sphinx_to_github_pages_rus.md'
+extra: 
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/lejbron
+      name: lejbron
+  generator: false 
+copyright: &copy lejbron
+markdown_extensions:
+    - toc:
+        permalink: "#"
+  
