@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Arkenstone - Структура
+# Структура папок
 
 ## arkenstone
 

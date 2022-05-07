@@ -1,4 +1,10 @@
-# Публикация документации на [GitHub Pages](https://pages.github.com/)
+---
+tags:
+  - git
+  - sphinx
+---
+
+# Публикация sphinx-документации на GitHub Pages
 
 Первоисточник доступен по [ссылке](https://daler.github.io/sphinxdoc-test/includeme.html).
 

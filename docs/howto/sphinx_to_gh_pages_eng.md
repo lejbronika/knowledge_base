@@ -1,4 +1,10 @@
-# How to publish sphinx-generated docs on github pages
+---
+tags:
+  - git
+  - sphinx
+---
+
+# Publish sphinx-generated docs on GitHub Pages
 
 This guide provides instructions for seting up repository on github which will store any data on `master` branch and host documentation from separeate `gh_pages` branch. [Original manual](https://github.com/daler/sphinxdoc-test) was written by [Ryan Dale](https://github.com/daler).
 

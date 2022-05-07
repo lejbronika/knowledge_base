@@ -5,7 +5,7 @@ tags:
   - django
 ---
 
-# Arkenstone - Стиль кода
+# Стиль кода
 
 ## Django
 

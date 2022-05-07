@@ -6,7 +6,9 @@ hide:
     - tags
 ---
 
-# Marlin - Heisenberg_0.0.1
+# Marlin Configuration Notes
+
+> Heisenberg_0.0.1
 
 - [Ultimaker 2 Marlin example](https://github.com/Ultimaker/Ultimaker2Marlin)
 

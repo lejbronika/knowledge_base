@@ -1,4 +1,4 @@
-# Знакомство с проектом Arkenstone
+# Знакомство с проектом
 
 Перед началом работы над проектом внимательно ознакомьтесь с [Arkenstone Codestyle](https://github.com/lejbron/arkenstone/blob/master/docs/arc_codestyle.md).
 

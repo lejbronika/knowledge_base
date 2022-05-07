@@ -46,12 +46,10 @@ nav:
       - arkenstone/arc_schema.md
       - arkenstone/branch_policy.md
       - arkenstone/best_practices.md
-    - Docs-as-live: 
-      - docdocs/index.md
     - How To:
       - howto/index.md
-      - howto/sphinx_to_github_pages_eng.md
-      - howto/sphinx_to_github_pages_rus.md
+      - howto/sphinx_to_gh_pages_eng.md
+      - howto/sphinx_to_gh_pages_rus.md
     - Notes: 
       - notes/index.md
       - Windows: notes/win_notes.md
