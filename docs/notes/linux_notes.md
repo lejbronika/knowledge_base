@@ -1,4 +1,9 @@
-# Linux notes
+---
+tags:
+  - linux
+---
+
+# Linux Notes
 
 ## Add opacity to Lxterminal
 

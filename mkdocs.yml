@@ -3,8 +3,8 @@ site_url: https://example.com/
 remote_branch: main
 theme:
   name: material
-  logo: media/endless-logo.png
-  favicon: media/endless-favicon.png
+  logo: media/identity/endless-logo.png
+  favicon: media/identity/endless-favicon.png
   palette:
     - media: "(prefers-color-scheme: light)" 
       scheme: default
@@ -43,19 +43,20 @@ nav:
       - arkenstone/get_on_board.md
       - arkenstone/arc_codestyle.md
       - arkenstone/arc_structure.md
+      - arkenstone/arc_schema.md
       - arkenstone/branch_policy.md
       - arkenstone/best_practices.md
     - Docs-as-live: 
       - docdocs/index.md
+    - How To:
+      - howto/index.md
+      - howto/sphinx_to_github_pages_eng.md
+      - howto/sphinx_to_github_pages_rus.md
     - Notes: 
       - notes/index.md
       - Windows: notes/win_notes.md
       - Linux: notes/linux_notes.md
       - GIT: notes/git_notes.md
-    - How To:
-      - howto/index.md
-      - howto/sphinx_to_github_pages_eng.md
-      - howto/sphinx_to_github_pages_rus.md
 extra: 
   social:
     - icon: fontawesome/brands/github-alt

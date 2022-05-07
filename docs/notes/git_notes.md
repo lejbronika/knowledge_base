@@ -1,4 +1,9 @@
-# Git Notes
+---
+tags:
+  - git
+---
+
+# GIT Notes
 
 - git commit --no-verify
 - git push origin --delete branch_name
