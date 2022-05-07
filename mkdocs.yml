@@ -34,11 +34,19 @@ nav:
     - Home: 
       - index.md
       - tags.md
-    - Docs-as-live: 
-      - docdocs/index.md
+      - glossary.md
     - Melty Minds: 
       - meltyminds/index.md
-      - 'Marlin Configuration Notes': meltyminds/configure_marlin.md
+      - meltyminds/configure_marlin.md
+    - Arkenstone:
+      - arkenstone/index.md
+      - arkenstone/get_on_board.md
+      - arkenstone/arc_codestyle.md
+      - arkenstone/arc_structure.md
+      - arkenstone/branch_policy.md
+      - arkenstone/best_practices.md
+    - Docs-as-live: 
+      - docdocs/index.md
     - Notes: 
       - notes/index.md
       - Windows: notes/win_notes.md
@@ -46,8 +54,8 @@ nav:
       - GIT: notes/git_notes.md
     - How To:
       - howto/index.md
-      - 'Publish sphinx-generated docs on gh-pages': 'howto/sphinx_to_github_pages_eng.md'
-      - 'Опубликовать sphinx-документацию на gh-pages': 'howto/sphinx_to_github_pages_rus.md'
+      - howto/sphinx_to_github_pages_eng.md
+      - howto/sphinx_to_github_pages_rus.md
 extra: 
   social:
     - icon: fontawesome/brands/github-alt
