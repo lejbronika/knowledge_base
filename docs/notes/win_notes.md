@@ -1,9 +1,28 @@
 ---
 tags:
   - windows
+  - python
+  - git
 ---
 
-# Windows Notes 
+# Windows Notes
+
+## Add Python to PATH
+
+- Press `Win + r`.
+- Type `sysdm.cpl`.
+- Go to `Advanced - Environment variables` (`Дополнительно - Переменные среды`).
+- Python application path should look loke this:
+```
+C:\Users\usr_name\AppData\Local\Programs\Python\PythonXX
+```
+
+## Switch GIT user 
+
+To switch git user on Windows go to credentials management tab:
+
+- `Control panel - User accounts - Credential manager`
+- `Панель управления - Учетные записи пользователей - Диспетчер учетных данных`
 
 ## Delete Windows.old
 

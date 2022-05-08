@@ -48,6 +48,7 @@ nav:
       - arkenstone/best_practices.md
     - How To:
       - howto/index.md
+      - howto/create_linux_live_usb.md
       - howto/sphinx_to_gh_pages_eng.md
       - howto/sphinx_to_gh_pages_rus.md
     - Notes: 
