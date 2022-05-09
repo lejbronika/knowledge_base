@@ -2,11 +2,11 @@
 tags:
     - 3d-print
     - Marlin
-hide:
-    - tags
 ---
 
-# Marlin Configuration Notes
+# R2D2 Modifications Log
+
+## Marlin Configuration
 
 > Heisenberg_0.0.1
 

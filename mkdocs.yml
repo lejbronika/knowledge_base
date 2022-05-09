@@ -37,7 +37,10 @@ nav:
       - glossary.md
     - Melty Minds: 
       - meltyminds/index.md
-      - meltyminds/configure_marlin.md
+      - meltyminds/msla_print_manual.md
+      - meltyminds/r2d2_log.md
+      - meltyminds/black_widow_log.md
+      - meltyminds/gcode_notes.md
     - Arkenstone:
       - arkenstone/index.md
       - arkenstone/get_on_board.md
@@ -64,6 +67,9 @@ extra:
   generator: false 
 copyright: &copy lejbron
 markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - footnotes
     - toc:
         permalink: "#"
-  
