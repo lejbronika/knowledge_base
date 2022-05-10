@@ -22,6 +22,7 @@ Access for some pages may be restricted to all users and should be requested dir
 
 ## Projects
 
+- [Rotary table for 3D photography](project_smartable.md)
 - [Freeplaytech RPi0W Game Boy](project_freeplaytech_rpi0w_gba.md)
 
 ## Notes

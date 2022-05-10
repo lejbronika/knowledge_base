@@ -1,3 +1,8 @@
+---
+tags:
+  - rpi
+---
+
 # Freeplaytech RPi0W Game Boy
 
 Page is dedicated to Game Boy on Raspberry Pi Zero W project made possible by [Freeplaytech](https://www.freeplaytech.com/) circuit board. 
