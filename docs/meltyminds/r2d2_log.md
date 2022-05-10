@@ -6,6 +6,8 @@ tags:
 
 # R2D2 Modifications Log
 
+![R2D2](../media/img/meltyminds/machines/r2d2.jpg)
+
 ## Marlin Configuration
 
 > Heisenberg_0.0.1
