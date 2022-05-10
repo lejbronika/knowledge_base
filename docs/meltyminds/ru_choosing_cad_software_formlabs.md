@@ -4,7 +4,7 @@ tags:
     - CAD
 ---
 
-# Гайд по выбору CAD от Formlabs
+# Гайд по выбору CAD-программы от Formlabs
 
 !!! info
     Перевод [статьи из блога](https://formlabs.com/blog/cad-software/) американского производителя 3D-принтеров и материалов для 3D-печати - студии [Formlabs](https://formlabs.com/company/).  
