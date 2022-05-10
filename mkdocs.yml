@@ -42,6 +42,7 @@ nav:
       - meltyminds/black_widow_log.md
       - meltyminds/project_smartable.md
       - meltyminds/project_freeplaytech_rpi0w_gba.md
+      - meltyminds/ru_choosing_cad_software_formlabs.md
       - meltyminds/gcode_notes.md
     - Arkenstone:
       - arkenstone/index.md
@@ -69,9 +70,12 @@ extra:
   generator: false 
 copyright: &copy lejbron
 markdown_extensions:
+    - abbr
     - admonition
     - pymdownx.details
     - pymdownx.superfences
     - footnotes
     - toc:
         permalink: "#"
+extra_css:
+  - style/extra.css

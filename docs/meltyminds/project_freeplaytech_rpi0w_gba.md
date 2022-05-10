@@ -5,10 +5,13 @@ tags:
 
 # Freeplaytech RPi0W Game Boy
 
+![Freeplaytech RPi0W GBA](../media/img/freeplaytech_rpi0w_gba/freeplaytech_rpi0w_gba.jpg)
+
 Page is dedicated to Game Boy on Raspberry Pi Zero W project made possible by [Freeplaytech](https://www.freeplaytech.com/) circuit board. 
 
 - [Freeplay Zero DIY Kit (Old Model)](https://www.freeplaytech.com/product/freeplay-zero-diy-kit-old-model/)
 - [Freeplay Setup](https://www.freeplaytech.com/support/setup/)
+- [Assembling instructions](https://docs.google.com/document/d/1YMPsnwN5uU8oHgqL_MX6X-kczjqVfMh-30f3EUmZTbM/edit?usp=sharing)
 
 ## Controller options
 

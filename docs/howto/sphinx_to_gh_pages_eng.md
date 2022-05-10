@@ -134,7 +134,8 @@ git commit -m "added .nojekyll"
 ## Setting up cloned repositoriess on another machine
 
 The only requirement is that the folder name that will hold the docs repository must have the same relative path name as is referred to in the Makefile.
-If these repositories were set:
+If these repositories were set:  
+
 - `/data/repos/sphinxdoc-test`
 - `/data/repos/sphinxdoc-test-docs` 
 

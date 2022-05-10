@@ -25,6 +25,10 @@ Access for some pages may be restricted to all users and should be requested dir
 - [Rotary table for 3D photography](project_smartable.md)
 - [Freeplaytech RPi0W Game Boy](project_freeplaytech_rpi0w_gba.md)
 
+## Articles
+
+- [Гайд по выбору CAD от Formlabs](ru_choosing_cad_software_formlabs.md)
+
 ## Notes
 
 - [G-code Notes](gcode_notes.md)
