@@ -40,6 +40,7 @@ nav:
       - meltyminds/msla_print_manual.md
       - meltyminds/r2d2_log.md
       - meltyminds/black_widow_log.md
+      - meltyminds/project_freeplaytech_rpi0w_gba.md
       - meltyminds/gcode_notes.md
     - Arkenstone:
       - arkenstone/index.md

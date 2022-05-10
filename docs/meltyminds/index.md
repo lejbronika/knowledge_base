@@ -20,6 +20,10 @@ Access for some pages may be restricted to all users and should be requested dir
 - [R2D2 Modifications Log](r2d2_log.md)
 - [Black Widow Modifications Log](black_widow_log.md)
 
+## Projects
+
+- [Freeplaytech RPi0W Game Boy](project_freeplaytech_rpi0w_gba.md)
+
 ## Notes
 
 - [G-code Notes](gcode_notes.md)

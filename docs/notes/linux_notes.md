@@ -5,6 +5,14 @@ tags:
 
 # Linux Notes
 
+## Make file executable
+
+To make file executable use this command:
+
+```
+chmod u+x <file>
+```
+
 ## Add opacity to Lxterminal
 
 - Install [Compton](https://github.com/chjj/compton)

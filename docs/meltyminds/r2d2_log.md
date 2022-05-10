@@ -48,7 +48,8 @@ tags:
     
 - Stepper Drivers:
     + A4988
-    + 'TMC2209' / 'TMC2209_STANDALONE'
+    + 'TMC2209' - UART connection
+    + 'TMC2209_STANDALONE' - simple connection
     + [Расчет опорного напряжения для драйверов шаговых двигателей - форум 3deshnik](https://3deshnik.ru/forum/viewtopic.php?f=5&t=78)
 
 ##### @section motion
