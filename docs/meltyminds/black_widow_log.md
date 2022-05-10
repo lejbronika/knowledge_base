@@ -1,6 +1,6 @@
 ---
 tags:
-    - 3d-print
+    - 3D
     - Marlin
 ---
 

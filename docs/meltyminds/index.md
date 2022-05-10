@@ -28,6 +28,7 @@ Access for some pages may be restricted to all users and should be requested dir
 ## Articles
 
 - [Гайд по выбору CAD от Formlabs](ru_choosing_cad_software_formlabs.md)
+- [Разработка дизайна деталей для SLA 3D-печати](ru_design_parts_for_sla_printing.md)
 
 ## Notes
 

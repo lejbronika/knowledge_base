@@ -1,3 +1,9 @@
+---
+tags:
+    - 3D
+    - CAD
+---
+
 # Гайд по выбору CAD от Formlabs
 
 !!! info

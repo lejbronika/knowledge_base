@@ -43,6 +43,7 @@ nav:
       - meltyminds/project_smartable.md
       - meltyminds/project_freeplaytech_rpi0w_gba.md
       - meltyminds/ru_choosing_cad_software_formlabs.md
+      - meltyminds/ru_design_parts_for_sla_printing.md
       - meltyminds/gcode_notes.md
     - Arkenstone:
       - arkenstone/index.md
@@ -72,9 +73,14 @@ copyright: &copy lejbron
 markdown_extensions:
     - abbr
     - admonition
+    - footnotes
     - pymdownx.details
     - pymdownx.superfences
-    - footnotes
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
     - toc:
         permalink: "#"
 extra_css:
