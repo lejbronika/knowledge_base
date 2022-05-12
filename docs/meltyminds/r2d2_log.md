@@ -38,6 +38,9 @@ tags:
     - PIDTEMP
     - PIDTEMPBED
     - EXTRUDE_MINTEMP
+    - TEMP_HYSTERESIS 5
+    - HEATER_0_MAXTEMP 310
+    - HOTEND_OVERSHOOT 10
 
 - [Генератор таблицы термитсора для Marlin](https://www.thingiverse.com/thing:103668/files)
 
@@ -53,6 +56,10 @@ tags:
     + 'TMC2209' - UART connection
     + 'TMC2209_STANDALONE' - simple connection
     + [Расчет опорного напряжения для драйверов шаговых двигателей - форум 3deshnik](https://3deshnik.ru/forum/viewtopic.php?f=5&t=78)
+
+#### @section calibrate
+    - comment out: MANUAL_PROBE_START_Z
+    - GRID_MAX_POINTS_X 4
 
 ##### @section motion
     - DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95 }
