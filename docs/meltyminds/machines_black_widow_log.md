@@ -11,107 +11,245 @@ tags:
 > meltyminds_0.0.1
 
 - [Tevo oficial image](https://github.com/Homers3D/Tevo-Black-Widow)
+- [MeltyMinds Fork 2.0.x](https://github.com/lejbronika/Marlin_TBW)
 
 ### Configuration.h
 
 #### @section info
-    - STRING_CONFIG_H_AUTHOR "lejbron"
-    - SHOW_CUSTOM_BOOTSCREEN
+
+> line 69
+
+```
+#define STRING_CONFIG_H_AUTHOR "lejbron"
+```
 
 #### @section machine
-    - MOTHERBOARD BOARD_MKS_GEN_13
-    - BAUDRATE 25000
-    - CUSTOM_MACHINE_NAME "Black Widow"
-    - Stepper Drivers:
-        + A4988
-        + DRV8825
-        + 'TMC2209' - UART connection
-        + 'TMC2209_STANDALONE' - simple connection
-        
-- [Расчет опорного напряжения для драйверов шаговых двигателей - форум 3deshnik](https://3deshnik.ru/forum/viewtopic.php?f=5&t=78)
-- [MKS GEN 1.4 pins](https://raw.githubusercontent.com/makerbase-mks/MKS-GEN/master/hardware/MKS%20GEN%20V1.4_004/MKS%20GEN%20V1.4_004%20PIN.pdf)
-- [MKS GEN 1.4 GitHub repo](https://github.com/makerbase-mks/MKS-GEN)
 
-##### @section extruder
-    - EXTRUDERS 1
-    - DEFAULT_NOMIANL_FILAMENT_DIA 1.75
+> line 95
 
-##### @section temperature
-    - TEMP_SENSOR_0 61
-    - TEMP_SENSOR_BED 1 
-    - EXTRUDE_MINTEMP
-    - TEMP_HYSTERESIS 5
-    - HEATER_0_MAXTEMP 310
-    - HOTEND_OVERSHOOT 10
-    - PIDTEMP
-    - PIDTEMPBED
+```
+#define BAUDRATE 250000
 
-- [NTC100K до 350 градусов](https://zona-3d.ru/catalog/elektronika/termodatchiki/termorezistory/datchik_temperatury_ntc100k_v_korpuse_maks_350_s_2_metra)
-- [3d-today question](https://3dtoday.ru/questions/ht-ntc100k-v-marlin-2-kakoy-nomer-tip-sootvetstvuet)
-- [Генератор таблицы термитсора для Marlin](https://www.thingiverse.com/thing:103668/files)
+	#define MOTHERBOARD BOARD_MKS_GEN_13
 
-##### @section homing
-    - USE_XMIN_PLUG
-    - USE_YMIN_PLUG
-    - USE_ZMIN_PLUG
-    - ENDSTOPPULLUPS
-    - X_MIN_ENDSTOP_INVERTING true 
-    - Y_MIN_ENDSTOP_INVERTING true 
-    - Z_MIN_ENDSTOP_INVERTING true
+#define CUSTOM_MACHINE_NAME "Black Widow"
+
+#define X_DRIVER_TYPE  DRV8825
+#define Y_DRIVER_TYPE  DRV8825
+#define Z_DRIVER_TYPE  DRV8825
+#define E0_DRIVER_TYPE DRV8825
+```
+
+#### @section extruder
+
+> line 233
+
+```
+#define EXTRUDERS 1
+#define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
+```
+
+#### @section machine
+
+> line 399
+
+#### @section temperature
+
+> line 446
+
+```
+#define TEMP_SENSOR_0 61
+#define TEMP_SENSOR_BED 1
+
+#define TEMP_HYSTERESIS              5
+
+#define HEATER_0_MAXTEMP 310
+
+#define HOTEND_OVERSHOOT 10
+
+#define PIDTEMP
+	
+//#define PIDTEMPBED
+```
+
+#### @section extruder
+
+> line 800
+
+```
+#define EXTRUDE_MINTEMP 170
+```
+
+#### @section machine
+
+> line 845
+
+#### @section homing
+
+> line 872
+
+```
+#define USE_XMIN_PLUG
+#define USE_YMIN_PLUG
+#define USE_ZMIN_PLUG
+
+#define ENDSTOPPULLUPS
+
+#define X_MIN_ENDSTOP_INVERTING true
+#define Y_MIN_ENDSTOP_INVERTING true
+```
+
+#### @section motion
+
+> line 991
+
+```
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 610 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 }
+
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+
+//#define CLASSIC_JERK
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+
+#if DISABLED(CLASSIC_JERK)
+  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+  #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
+                                      // for small segments (< 1mm) with large junction angles (> 135°).
+#endif
+```
+
+??? Info
+	- `DEFAULT_ACCELERATION`: `P`
+    - `DEFAULT_RETRACT_ACCELERATION`: `R`
+    - `DEFAULT_TRAVEL_ACCELERATION`: `T`
 
 #### @section probes
-    - Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
-    
+
+> line 1108
+
+#### @section extruder
+
+> line 1428
+
+#### @section machine
+
+> line 1433
+
+```
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR true
+#define INVERT_Z_DIR true
+```
+
+#### @section extruder
+
+> line 1446
+
+```
+#define INVERT_E0_DIR false
+```
+
+#### @section homing
+
+> line 1458
+
+```
+#define X_HOME_DIR -1
+#define Y_HOME_DIR -1
+#define Z_HOME_DIR -1
+```
+
+#### @section machine
+
+> line 1487
+
+```
+#define X_BED_SIZE 380
+#define Y_BED_SIZE 250
+
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
+#define Z_MIN_POS 0
+#define X_MAX_POS X_BED_SIZE
+#define Y_MAX_POS Y_BED_SIZE
+#define Z_MAX_POS 300
+```
+
 #### @section calibrate
-    - comment out: MANUAL_PROBE_START_Z
-    - GRID_MAX_POINTS_X 4
 
-##### @section motion
-    - DEFAULT_AXIS_STEPS_PER_UNIT   {160,160,3200,610}
-    - DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-    - DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 }
-    
-    - P - DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves 
-    - R - DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-    - T - DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+> line 1632
 
-    - DEFAULT_XYJERK 20.0    // (mm/sec)
-    - DEFAULT_ZJERK 0.4     // (mm/sec)
+```
+#define MESH_BED_LEVELING
 
-- [Расчет Junction Deviation для Marlin](https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html)
-- [Калькулятор расчета шаг/мм для шаговых двигателей](https://blog.prusaprinters.org/calculator_3416/#stepspermmbelt)
+//#define MANUAL_PROBE_START_Z 0.1
 
-##### MIX
-    - INVERT_X_DIR true
-    - INVERT_Y_DIR true
-    - INVERT_Z_DIR true
-    - INVERT_E0_DIR false
-    - X_HOME_DIR -1
-    - Y_HOME_DIR -1
-    - Z_HOME_DIR -1
-    - X_BED_SIZE 380
-    - Y_BED_SIZE 250
-    - Z_MAX_POS 300
-    - comment out: MIN_SOFTWARE_ENDSTOPS
+#define GRID_MAX_POINTS_X 4
+#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-##### @section calibrate:
-    - MESH_BED_LEVELING
-    - LCD_BED_LEVELING
-    - LEVEL_BED_CORNERS
+#define LCD_BED_LEVELING
+#define LEVEL_BED_CORNERS
+``` 
 
-##### @section extras:
-    - EEPROM_SETTINGS
+#### @section homing
 
-##### @section lcd:
-    - LCD_LANGUAGE en
-    - DISPLAY_CHARSET_HD44780 CYRILLIC
-    - SDSUPPORT
-    - MKS_MINI_12864_V3MKS_MINI_12864
-    - NEOPIXEL_LED
+> line 1849
+
+#### @section calibrate
+
+> line 1886
+
+#### @section extras
+
+> line 1947
+
+```
+#define EEPROM_SETTINGS
+```
+
+#### @section temperature
+
+> line 1987
+
+#### @section lcd
+
+> line 2180
+
+```
+#define LCD_LANGUAGE en
+
+#define DISPLAY_CHARSET_HD44780 CYRILLIC
+
+#define SDSUPPORT
+```
+
+LCD Model-specific:
+
+```
+#define MKS_MINI_12864_V3
+#define NEOPIXEL_LED
+
+    #define NEOPIXEL_TYPE          NEO_RGB
+```
+
+#### @section extras
+
+> line 2954
+
+### Configuration_adv.h
+
+- `QUICK_HOME` 
+- `BABYSTEPPING`
+- `NO_VOLUMETRICS`
+
 
 ### BL Touch Config 
 
-- [Configure Bl-Touch in Marlin 2.0.x](https://3dwork.io/en/configure-bltouch-in-marlin/)
+[Configure Bl-Touch in Marlin 2.0.x](https://3dwork.io/en/configure-bltouch-in-marlin/)
  
 ```
 #define Z_MIN_ENDSTOP_INVERTING false
@@ -142,16 +280,6 @@ tags:
 #define RESTORE_LEVELING_AFTER_G28
 ```
 
-### Configuration_adv.h
-
-- `E0_AUTO_FAN_PIN 10`
-- `QUICK_HOME` 
-- `BABYSTEPPING`
-- `LIN_ADVANCE`
-    + `LIN_ADVANCE_K 0`
-    + `LA_DEBUG`
-- `NO_VOLUMETRICS`
-
 ## 3d-printed parts
 
 ### Installed
@@ -174,7 +302,7 @@ tags:
 - [X Belt Tensioner v1](https://www.thingiverse.com/thing:3309080)
 - [X Belt Tensioner v2](https://www.thingiverse.com/thing:4648374)
 
-## Electronics Case
+#### Electronics Case
 
 - [Electronics housing upgrade](https://www.thingiverse.com/thing:2346801)
 - [Rear opening cap](https://www.thingiverse.com/thing:2672795)
