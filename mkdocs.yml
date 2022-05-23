@@ -37,14 +37,16 @@ nav:
       - glossary.md
     - Melty Minds: 
       - meltyminds/index.md
-      - meltyminds/msla_print_manual.md
-      - meltyminds/r2d2_log.md
-      - meltyminds/black_widow_log.md
-      - meltyminds/project_smartable.md
-      - meltyminds/project_freeplaytech_rpi0w_gba.md
-      - meltyminds/ru_choosing_cad_software_formlabs.md
-      - meltyminds/ru_design_parts_for_sla_printing.md
-      - meltyminds/gcode_notes.md
+      - meltyminds/manuals_msla_print.md
+      - meltyminds/machines_general.md
+      - meltyminds/machines_r2d2_log.md
+      - meltyminds/machines_black_widow_log.md
+      - meltyminds/projects_smartable.md
+      - meltyminds/projects_freeplaytech_rpi0w_gba.md
+      - meltyminds/articles_ru_choosing_cad_software_formlabs.md
+      - meltyminds/articles_ru_design_parts_for_sla_printing.md
+      - meltyminds/notes_gcode.md
+      - meltyminds/notes_prusa_slicer.md
     - Arkenstone:
       - arkenstone/index.md
       - arkenstone/get_on_board.md
