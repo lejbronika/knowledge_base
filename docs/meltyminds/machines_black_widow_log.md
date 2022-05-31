@@ -304,10 +304,11 @@ TBW_z_offset = -2,375 + 0,1 = -2,275
 
 ### Not tested
 
+- [Nozzle fan duct](https://www.thingiverse.com/thing:2175680)
+
 #### Mechanics
 
-- [Y-Carriage MGN12 Conversion](https://www.thingiverse.com/thing:2569059)
-- [MGN12 Guide Tool for 2040 Extrusion](https://www.thingiverse.com/thing:2566111)
+- [!5 Degree extruder mount](https://www.thingiverse.com/thing:1789293)
 - [HE cable management](https://www.thingiverse.com/thing:1918783)
 - [Corner Plates v1](https://www.thingiverse.com/thing:1858082)
 - [Corner Plates v2](https://www.thingiverse.com/thing:2016601)
@@ -316,7 +317,22 @@ TBW_z_offset = -2,375 + 0,1 = -2,275
 - [X Belt Tensioner v1](https://www.thingiverse.com/thing:3309080)
 - [X Belt Tensioner v2](https://www.thingiverse.com/thing:4648374)
 
+##### MGN12 upgrades
+
+- [X-carriage MGN12 conversion](https://www.thingiverse.com/thing:2566111)
+- [Y-Carriage MGN12 Conversion](https://www.thingiverse.com/thing:2569059)
+- [MGN12 Guide Tool for 2040 Extrusion](https://www.thingiverse.com/thing:2566111)
+
 #### Electronics Case
 
+- [Original case](https://www.thingiverse.com/thing:2125506)
 - [Electronics housing upgrade](https://www.thingiverse.com/thing:2346801)
 - [Rear opening cap](https://www.thingiverse.com/thing:2672795)
+
+#### Rebuild projects
+
+- [MGN12 XY upgrade](https://www.thingiverse.com/thing:2984957)
+
+#### Other
+
+- [RPi Mount](https://www.thingiverse.com/thing:2620241)
