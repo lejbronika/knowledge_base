@@ -4,41 +4,38 @@ tags:
     - Marlin
 ---
 
-# R2D2 Modifications Log
+# Melty Modifications Log
 
 ![R2D2](../media/img/meltyminds/machines/r2d2.jpg)
 
 ## Marlin Configuration
 
-> v2.0.9.1, branch `heisenberg 0.0.1`
+> v2.0.9.3, branch `melty_heisenberg_1.0.0`
 
-[Ultimaker 2 Marlin example](https://github.com/Ultimaker/Ultimaker2Marlin)
+- [Ultimaker 2 Marlin example](https://github.com/Ultimaker/Ultimaker2Marlin)
+- [Marlin Fork](https://github.com/lejbronika/Marlin_MeltyMinds)
 
 ### Configuration.h
 
 #### @section info
 
-> line 69
-
 ```
 #define STRING_CONFIG_H_AUTHOR "lejbron"
+#define CUSTOM_VERSION_FILE Version.h
+#define SHOW_CUSTOM_BOOTSCREEN
 ```
 
 #### @section machine
-
-> line 95
 
 ```
 #define BAUDRATE 250000
 
 	#define MOTHERBOARD BOARD_MKS_GEN_13
 
-#define CUSTOM_MACHINE_NAME "melty"
+#define CUSTOM_MACHINE_NAME "Melty"
 ```
 
 #### @section extruder
-
-> line 191
 
 ```
 #define EXTRUDERS 1
@@ -50,8 +47,6 @@ tags:
 > line 357
 
 #### @section temperature
-
-> line 395
 
 ```
 #define TEMP_SENSOR_0 13
@@ -74,10 +69,8 @@ tags:
 
 #### @section extruder
 
-> line 682
-
 ```
-#define EXTRUDE_MINTEMP 200
+#define EXTRUDE_MINTEMP 170 // set 5 for extruder flow calibration
 ```
 
 #### @section machine
@@ -85,8 +78,6 @@ tags:
 > line 727
 
 #### @section homing
-
-> line 743
 
 ```
 #define USE_XMIN_PLUG
@@ -96,6 +87,8 @@ tags:
 #define ENDSTOPPULLUPS
 
 #define X_MIN_ENDSTOP_INVERTING true
+#define Y_MAX_ENDSTOP_INVERTING true
+#define Z_MAX_ENDSTOP_INVERTING true
 
 #define X_DRIVER_TYPE  TMC2209_STANDALONE
 #define Y_DRIVER_TYPE  TMC2209_STANDALONE
@@ -105,7 +98,6 @@ tags:
 
 #### @section motion
 
-> line 876
 
 ```
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
@@ -141,8 +133,6 @@ tags:
 
 #### @section machine
 
-> line 1289
-
 ```
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR false
@@ -151,15 +141,11 @@ tags:
 
 #### @section extruder
 
-> line 1299
-
 ```
 #define INVERT_E0_DIR true
 ```
 
 #### @section homing
-
-> line 1311
 
 ```
 #define X_HOME_DIR -1
@@ -168,8 +154,6 @@ tags:
 ```
 
 #### @section machine
-
-> line 1337
 
 ```
 #define X_BED_SIZE 195
@@ -180,12 +164,10 @@ tags:
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 193
 ```
 
 #### @section calibrate
-
-> line 1470
 
 ```
 #define MESH_BED_LEVELING
@@ -209,8 +191,6 @@ tags:
 
 #### @section extras
 
-> line 1784
-
 ```
 #define EEPROM_SETTINGS
 ```
@@ -220,8 +200,6 @@ tags:
 > line 1823
 
 #### @section lcd
-
-> line 2017
 
 ```
 #define LCD_LANGUAGE en
@@ -251,6 +229,10 @@ LCD Model-specific:
     + `LIN_ADVANCE_K 0`
     + `LA_DEBUG`
 - `NO_VOLUMETRICS`
+
+### Version.h
+
+### _Bootscreen.h
 
 ## 3d-printed parts
 

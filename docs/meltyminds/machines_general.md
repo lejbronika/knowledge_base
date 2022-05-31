@@ -12,6 +12,10 @@
 
 ### Temperature
 - [Генератор таблицы термитсора для Marlin](https://www.thingiverse.com/thing:103668/files)
+- `TEMP_SENSOR_x`:
+  - 13: TriangleLab NTC100K B3950
+  - 61: Zona3D
+  - 1: heatbed
 
 #### Homing
 - Stepper Drivers:

@@ -17,15 +17,13 @@ tags:
 
 #### @section info
 
-> line 69
-
 ```
 #define STRING_CONFIG_H_AUTHOR "lejbron"
+#define CUSTOM_VERSION_FILE Version.h
+#define SHOW_CUSTOM_BOOTSCREEN
 ```
 
 #### @section machine
-
-> line 95
 
 ```
 #define BAUDRATE 250000
@@ -33,16 +31,9 @@ tags:
 	#define MOTHERBOARD BOARD_MKS_GEN_13
 
 #define CUSTOM_MACHINE_NAME "Black Widow"
-
-#define X_DRIVER_TYPE  DRV8825
-#define Y_DRIVER_TYPE  DRV8825
-#define Z_DRIVER_TYPE  DRV8825
-#define E0_DRIVER_TYPE DRV8825
 ```
 
 #### @section extruder
-
-> line 233
 
 ```
 #define EXTRUDERS 1
@@ -59,7 +50,7 @@ tags:
 
 ```
 #define TEMP_SENSOR_0 61
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 11
 
 #define TEMP_HYSTERESIS              5
 
@@ -97,6 +88,11 @@ tags:
 
 #define X_MIN_ENDSTOP_INVERTING true
 #define Y_MIN_ENDSTOP_INVERTING true
+
+#define X_DRIVER_TYPE  DRV8825
+#define Y_DRIVER_TYPE  DRV8825
+#define Z_DRIVER_TYPE  DRV8825
+#define E0_DRIVER_TYPE DRV8825
 ```
 
 #### @section motion
@@ -168,15 +164,15 @@ tags:
 > line 1487
 
 ```
-#define X_BED_SIZE 380
-#define Y_BED_SIZE 250
+#define X_BED_SIZE 320
+#define Y_BED_SIZE 220
 
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 280
 ```
 
 #### @section calibrate
@@ -258,16 +254,14 @@ LCD Model-specific:
 
 #define BLTOUCH
 
-#define NOZZLE_TO_PROBE_OFFSET { 41, 8, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 41, 8, -2 }
 
 #define MULTIPLE_PROBING 2
 
 #define Z_MIN_PROBE_REPEATABILITY_TEST
 
-#define X_BED_SIZE 380
-#define Y_BED_SIZE 250
-
 #define AUTO_BED_LEVELING_BILINEAR
+#define RESTORE_LEVELING_AFTER_G28
 
 #define G26_MESH_VALIDATION
 
@@ -275,9 +269,6 @@ LCD Model-specific:
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 #define Z_SAFE_HOMING
-
-
-#define RESTORE_LEVELING_AFTER_G28
 ```
 
 ## 3d-printed parts

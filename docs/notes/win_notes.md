@@ -7,6 +7,10 @@ tags:
 
 # Windows Notes
 
+## Secure Installation
+
+- [Forbes - How To Secure Microsoft Windows 10 In Eight Easy Steps](https://www.forbes.com/sites/daveywinder/2019/12/21/how-to-secure-microsoft-windows-10-in-8-easy-steps-microsoft-win10-security-tutorial/?sh=60615f764ec9)
+
 ## Add Python to PATH
 
 - Press `Win + r`.
