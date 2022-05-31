@@ -270,6 +270,24 @@ LCD Model-specific:
 
 #define Z_SAFE_HOMING
 ```
+- Обнулить Z-offset
+- выполнить autohome
+- отключить концевики
+- выставить Z-0ffset
+- сохранить значения
+- включить концевики
+
+G-Code:
+
+```
+G28
+G1 F500 Z0
+M211 S0 
+```
+
+z_offset = calculated_offsed + paper_thicknes (~0.1mm)
+
+TBW_z_offset = -2,375 + 0,1 = -2,275
 
 ## 3d-printed parts
 
