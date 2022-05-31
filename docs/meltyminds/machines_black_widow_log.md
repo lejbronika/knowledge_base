@@ -246,6 +246,7 @@ LCD Model-specific:
 ### BL Touch Config 
 
 [Configure Bl-Touch in Marlin 2.0.x](https://3dwork.io/en/configure-bltouch-in-marlin/)
+[K3D yiutube guide](https://www.youtube.com/watch?v=oJgKQKbN8nE)
  
 ```
 #define Z_MIN_ENDSTOP_INVERTING false
@@ -282,7 +283,11 @@ G-Code:
 ```
 G28
 G1 F500 Z0
-M211 S0 
+M211 S0 ; disable endstops
+G91 ; akternative coordinates
+G1 Zx ...
+M211 S1 ; enable endstops
+G90 ; absolute coordinates
 ```
 
 z_offset = calculated_offsed + paper_thicknes (~0.1mm)
