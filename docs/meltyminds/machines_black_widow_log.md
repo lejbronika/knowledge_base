@@ -293,6 +293,7 @@ G1 F500 Z0
 M211 S0 ; disable endstops
 G91 ; akternative coordinates
 G1 Zx ...
+M114 ; get current position
 M211 S1 ; enable endstops
 G90 ; absolute coordinates
 ```
