@@ -164,7 +164,7 @@ tags:
 > line 1487
 
 ```
-#define X_BED_SIZE 320
+#define X_BED_SIZE 348
 #define Y_BED_SIZE 220
 
 #define X_MIN_POS 0
@@ -255,7 +255,7 @@ LCD Model-specific:
 
 #define BLTOUCH
 
-#define NOZZLE_TO_PROBE_OFFSET { 41, 8, -2 }
+#define NOZZLE_TO_PROBE_OFFSET { -11, -37, -2 }
 
 #define MULTIPLE_PROBING 2
 
@@ -270,6 +270,11 @@ LCD Model-specific:
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 #define Z_SAFE_HOMING
+ 
+#if ENABLED(Z_SAFE_HOMING)
+#define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2) // X point for Z homing when homing all axes (G28).
+#define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2) // Y point for Z homing when homing all axes (G28).
+#endif
 ```
 - Обнулить Z-offset
 - выполнить autohome
@@ -292,7 +297,7 @@ G90 ; absolute coordinates
 
 z_offset = calculated_offsed + paper_thicknes (~0.1mm)
 
-TBW_z_offset = -2,375 + 0,1 = -2,275
+TBW_z_offset = -2,375 + 0,35 = -2,275
 
 ## 3d-printed parts
 
