@@ -205,6 +205,8 @@ tags:
 
 ```
 #define EEPROM_SETTINGS
+
+#define EEPROM_INIT_NOW
 ```
 
 #### @section temperature
