@@ -298,6 +298,17 @@ M211 S1 ; enable endstops
 G90 ; absolute coordinates
 ```
 
+#### Offset Calibration
+
+- Connect to PC
+- !preheat!
+- `G28`
+- `G1 F500 Z0`
+- `Configuration` -> `Probe Z Offset`
+- Calibrate with sheet of paper
+- `Configuration` -> `Store Settings`
+- Check with sheet of paper: `G28 G1 F500 Z0`
+
 z_offset = calculated_offsed + paper_thicknes (~0.1mm)
 
 TBW_z_offset = -2,375 + 0,35 = -2,275
