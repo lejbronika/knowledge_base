@@ -1,0 +1,95 @@
+pipeline {
+    agent {
+		label 'docs-builder'
+	}
+    environment {
+        SPHINX_DIR  		= '.'
+        BUILD_DIR_GENERAL   = 'documentation/general_doc/_built'
+        SOURCE_DIR_GENERAL	= 'documentation/general_doc/source'
+		BUILD_DIR_CI   		= 'documentation/CI_doc/_built'
+        SOURCE_DIR_CI		= 'documentation/CI_doc/source'
+		BUILD_DIR_API   	= 'documentation/API_doc/_built'
+        SOURCE_DIR_API		= 'documentation/API_doc/source'
+        DEPLOY_HOST 		= 'ubuntu@172.27.42.89:/var/www/html/'
+    }
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                // virtualenv may not be necessary with root,
+                // but I still think it's a good idea.
+                sh '''
+				   docker run --rm -i python:3.7
+				   python3 -m pip install --user --upgrade pip
+				   python3 -m pip install --user virtualenv
+                   python3 -m virtualenv pyenv
+                   . pyenv/bin/activate
+                   pip install -r ${SPHINX_DIR}/requirements.txt
+                '''
+            }
+        }
+        stage('Build') {
+            steps {
+                // clear out old files
+                sh 'rm -rf ${BUILD_DIR_GENERAL}'
+				sh 'rm -rf ${BUILD_DIR_CI}'
+                sh 'rm -f ${SPHINX_DIR}/sphinx-build.log'
+
+                sh '''
+                   ${WORKSPACE}/pyenv/bin/sphinx-build \
+                   -q -w ${SPHINX_DIR}/sphinx-build.log \
+                   -b html \
+                   -d ${BUILD_DIR_GENERAL}/doctrees ${SOURCE_DIR_GENERAL} ${BUILD_DIR_GENERAL}
+                '''
+				sh '''
+                   ${WORKSPACE}/pyenv/bin/sphinx-build \
+                   -q -w ${SPHINX_DIR}/sphinx-build.log \
+                   -b html \
+                   -d ${BUILD_DIR_CI}/doctrees ${SOURCE_DIR_CI} ${BUILD_DIR_CI}
+                '''
+				sh '''
+                   ${WORKSPACE}/pyenv/bin/sphinx-build \
+                   -q -w ${SPHINX_DIR}/sphinx-build.log \
+                   -b html \
+                   -d ${BUILD_DIR_API}/doctrees ${SOURCE_DIR_API} ${BUILD_DIR_API}
+                '''
+            }
+            post {
+                failure {
+                    sh 'cat ${SPHINX_DIR}/sphinx-build.log'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+				sshagent(credentials: ['docs-deployer']) {
+					sh '''#!/bin/bash
+					  rm -f ${SPHINX_DIR}/rsync.log
+					  RSYNCOPT=(-aze 'ssh -o StrictHostKeyChecking=no')
+					  rsync "${RSYNCOPT[@]}" \
+					  --exclude-from=${SPHINX_DIR}/rsync-exclude.txt \
+					  --log-file=${SPHINX_DIR}/rsync.log \
+					  --delete \
+					  ${BUILD_DIR_GENERAL}/ ${DEPLOY_HOST}
+					'''
+					sh '''#!/bin/bash
+					  RSYNCOPT=(-aze 'ssh -o StrictHostKeyChecking=no')
+					  rsync "${RSYNCOPT[@]}" \
+					  --delete \
+					  ${BUILD_DIR_CI}/ ${DEPLOY_HOST}/CI/
+					'''
+					sh '''#!/bin/bash
+					  RSYNCOPT=(-aze 'ssh -o StrictHostKeyChecking=no')
+					  rsync "${RSYNCOPT[@]}" \
+					  --delete \
+					  ${BUILD_DIR_API}/ ${DEPLOY_HOST}/API/api_doc/
+					'''
+				}
+            }
+            post {
+                failure {
+                    sh 'cat ${SPHINX_DIR}/rsync.log'
+                }
+            }
+        }
+    }
+}

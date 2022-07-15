@@ -30,6 +30,9 @@ plugins:
       lang: 
         - en
         - ru
+  - exclude:
+      glob:
+        - local/*
 nav:
     - Home: 
       - index.md
